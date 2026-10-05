@@ -1,0 +1,19 @@
+.task-search {
+    width: 560px;
+    padding: 12px;
+    color: #000;
+    background-color: #fff;
+    border: 0;
+    border-radius: 16px;
+    outline: none;
+}
+
+.task-search:focus {
+    outline: 1px solid #22c55e;
+}
+
+@media (max-width: 700px) {
+    .task-search {
+        width: 100%;
+    }
+}

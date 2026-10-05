@@ -1,0 +1,109 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Plan the week",
+      "description": "Review upcoming commitments and set priorities for the week.",
+      "status": "new",
+      "createdAt": "2026-10-05T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Organize project files",
+      "description": "Sort documents into folders and remove outdated duplicates.",
+      "status": "new",
+      "createdAt": "2026-10-04T14:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Prepare a grocery list",
+      "description": "Check the kitchen and write down ingredients needed for the week.",
+      "status": "new",
+      "createdAt": "2026-10-03T11:15:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Book a dentist appointment",
+      "description": "Call the clinic and schedule a routine check-up.",
+      "status": "new",
+      "createdAt": "2026-10-02T09:45:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Read the new project brief",
+      "description": "Review the requirements and note any questions for the team.",
+      "status": "new",
+      "createdAt": "2026-10-01T16:20:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Update the project roadmap",
+      "description": "Add current milestones and confirm target dates with the team.",
+      "status": "in_progress",
+      "createdAt": "2026-10-05T07:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Draft the monthly report",
+      "description": "Summarize this month's progress, blockers, and next steps.",
+      "status": "in_progress",
+      "createdAt": "2026-10-04T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Review the landing page",
+      "description": "Check page content and layout on desktop and mobile screens.",
+      "status": "in_progress",
+      "createdAt": "2026-10-03T13:40:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Practice a presentation",
+      "description": "Rehearse the main points and adjust the timing of each section.",
+      "status": "in_progress",
+      "createdAt": "2026-10-02T15:10:00.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Compare internet plans",
+      "description": "Check available providers, monthly costs, and contract terms.",
+      "status": "in_progress",
+      "createdAt": "2026-10-01T12:25:00.000Z"
+    },
+    {
+      "id": 11,
+      "title": "Submit the expense report",
+      "description": "Add receipts and send the completed report to finance.",
+      "status": "done",
+      "createdAt": "2026-09-30T09:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "title": "Clean up the workspace",
+      "description": "Clear the desk, organize supplies, and recycle old notes.",
+      "status": "done",
+      "createdAt": "2026-09-29T17:15:00.000Z"
+    },
+    {
+      "id": 13,
+      "title": "Send the meeting notes",
+      "description": "Share key decisions and action items with all attendees.",
+      "status": "done",
+      "createdAt": "2026-09-28T11:30:00.000Z"
+    },
+    {
+      "id": 14,
+      "title": "Back up important files",
+      "description": "Copy current work documents to the secure backup drive.",
+      "status": "done",
+      "createdAt": "2026-09-27T08:50:00.000Z"
+    },
+    {
+      "id": 15,
+      "title": "Finish the online course",
+      "description": "Complete the final module and download the course certificate.",
+      "status": "done",
+      "createdAt": "2026-09-26T14:05:00.000Z"
+    }
+  ]
+}

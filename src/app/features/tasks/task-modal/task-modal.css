@@ -1,0 +1,112 @@
+.task-modal__toast {
+    position: fixed;
+    z-index: 60;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #ef4444;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.task-modal__overlay {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+.task-modal__dialog {
+    position: relative;
+    width: 384px;
+    max-width: calc(100vw - 32px);
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.task-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-modal__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.task-modal__close {
+    color: #6b7280;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border: 0;
+}
+
+.task-modal__close:hover {
+    color: #000;
+}
+
+.task-modal__close:disabled {
+    opacity: 0.5;
+}
+
+.task-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.task-modal__label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.task-modal__input,
+.task-modal__textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    outline: none;
+}
+
+.task-modal__input:focus,
+.task-modal__textarea:focus {
+    outline: 1px solid #22c55e;
+}
+
+.task-modal__textarea {
+    resize: none;
+}
+
+.task-modal__validation {
+    margin-top: 4px;
+    color: #ef4444;
+    font-size: 14px;
+}
+
+.task-modal__submit {
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    background-color: #22c55e;
+    border-radius: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: 0px;
+}
+
+.task-modal__submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

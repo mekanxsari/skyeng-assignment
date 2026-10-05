@@ -1,0 +1,120 @@
+@if (toastMessage()) {
+    <div
+        class="task-modal__toast"
+    >
+        {{ toastMessage() }}
+    </div>
+}
+
+<div class="task-modal__overlay">
+
+    <div class="task-modal__dialog">
+
+        <div class="task-modal__header">
+
+            <h2 class="task-modal__title">
+                Create Task
+            </h2>
+
+            <button
+                type="button"
+                (click)="close()"
+                [disabled]="isSubmitting()"
+                class="task-modal__close"
+            >
+                &times;
+            </button>
+
+        </div>
+
+        <form
+            [formGroup]="taskForm"
+            (ngSubmit)="onSubmit()"
+            class="task-modal__form"
+        >
+
+            <div>
+
+                <label class="task-modal__label">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    formControlName="title"
+                    maxlength="100"
+                    placeholder="Task title"
+                    (blur)="onBlur('title')"
+                    class="task-modal__input"
+                />
+
+                @if (
+                    taskForm.controls.title.invalid &&
+                    taskForm.controls.title.touched
+                ) {
+
+                    <div class="task-modal__validation">
+
+                        @if (taskForm.controls.title.hasError('required')) {
+
+                            Title is required.
+
+                        }
+
+                        @if (taskForm.controls.title.hasError('whitespace')) {
+
+                            Title cannot contain only spaces.
+
+                        }
+
+                        @if (taskForm.controls.title.hasError('maxlength')) {
+
+                            Title must be 100 characters or less.
+
+                        }
+
+                    </div>
+
+                }
+
+            </div>
+
+            <div>
+
+                <label class="task-modal__label">
+                    Description
+                </label>
+
+                <textarea
+                    rows="4"
+                    formControlName="description"
+                    placeholder="Task description (optional)"
+                    (blur)="onBlur('description')"
+                    class="task-modal__textarea"
+                ></textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                [disabled]="isSubmitting()"
+                class="task-modal__submit"
+            >
+
+                @if (isSubmitting()) {
+
+                    Creating...
+
+                } @else {
+
+                    Create Task
+
+                }
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

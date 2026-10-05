@@ -1,0 +1,40 @@
+@if (creationMessage()) {
+    <div
+        class="tasks-page__toast"
+    >
+        {{ creationMessage() }}
+    </div>
+}
+
+<div class="tasks-page">
+
+    <div class="tasks-page__toolbar">
+
+        <app-task-search
+            (searchChanged)="onSearchChanged($event)"
+        />
+
+        <app-task-filter
+            (statusChanged)="onStatusChanged($event)"
+        />
+
+        <app-task-create
+            (clicked)="openModal()"
+        />
+
+    </div>
+
+    <app-task-list
+        [status]="selectedStatus()"
+        [search]="searchTerm()"
+        [refresh]="refreshList()"
+    />
+</div>
+
+@if (isModalOpen()) {
+    <app-task-modal
+        [isOpen]="isModalOpen()"
+        (closed)="closeModal()"
+        (taskCreated)="onTaskCreated($event)"
+    />
+}

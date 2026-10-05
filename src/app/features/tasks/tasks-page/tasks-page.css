@@ -1,0 +1,36 @@
+.tasks-page {
+    max-width: 820px;
+}
+
+.tasks-page__toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.tasks-page__toast {
+    position: fixed;
+    z-index: 50;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #22c55e;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@media (max-width: 860px) {
+    .tasks-page {
+        width: 100%;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tasks-page__toolbar {
+        flex-wrap: wrap;
+    }
+}

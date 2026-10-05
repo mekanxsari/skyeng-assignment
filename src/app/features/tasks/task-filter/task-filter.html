@@ -1,0 +1,19 @@
+<div class="task-filter">
+    <select
+        class="task-filter__select"
+        name="options"
+        id="options"
+        (change)="onChange($event)"
+    >
+        <option value="all" selected>All</option>
+        <option value="new">New</option>
+        <option value="in_progress">In progress</option>
+        <option value="done">Done</option>
+    </select>
+
+    <div class="task-filter__icon">
+        <svg class="task-filter__svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </div>
+</div>

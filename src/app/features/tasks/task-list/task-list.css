@@ -1,0 +1,116 @@
+.task-list__toast {
+    position: fixed;
+    z-index: 50;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #ef4444;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.task-list__message {
+    padding: 32px 16px;
+    color: #6b7280;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.task-list__error {
+    margin-bottom: 12px;
+    color: #ef4444;
+}
+
+.task-list__retry {
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #22c55e;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.task-list__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.task-list__card {
+    width: 400px;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    cursor: default;
+}
+
+.task-list__card-header {
+    display: flex;
+}
+
+.task-list__title {
+    flex: 1;
+    font-weight: 700;
+}
+
+.task-list__status {
+    position: relative;
+    display: inline-block;
+}
+
+.task-list__status-select {
+    padding: 4px 32px 4px 16px;
+    color: #fff;
+    background-color: #22c55e;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task-list__status-select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.task-list__status-icon {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    pointer-events: none;
+}
+
+.task-list__status-svg {
+    width: 16px;
+    height: 16px;
+}
+
+.task-list__date {
+    display: block;
+    margin-top: -4px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.task-list__description {
+    font-size: 14px;
+}
+
+@media (max-width: 860px) {
+    .task-list__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .task-list__card {
+        width: 100%;
+    }
+}

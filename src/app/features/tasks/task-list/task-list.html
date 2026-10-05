@@ -1,0 +1,158 @@
+@if (toastMessage()) {
+    <div
+        class="task-list__toast"
+    >
+        {{ toastMessage() }}
+    </div>
+}
+
+@if (isLoading()) {
+
+    <div class="task-list__message">
+        Loading...
+    </div>
+
+} @else if (loadError()) {
+
+    <div class="task-list__message">
+
+        <p class="task-list__error">
+            {{ loadError() }}
+        </p>
+
+        <button
+            type="button"
+            (click)="retry()"
+            class="task-list__retry"
+        >
+            Try again
+        </button>
+
+    </div>
+
+} @else if (tasks().length === 0) {
+
+    <div class="task-list__message">
+
+        @if (search().trim()) {
+
+            No tasks found for "{{ search() }}".
+
+        } @else if (status() === 'new') {
+
+            No new tasks found.
+
+        } @else if (status() === 'in_progress') {
+
+            No in-progress tasks found.
+
+        } @else if (status() === 'done') {
+
+            No completed tasks found.
+
+        } @else {
+
+            No tasks found.
+
+        }
+
+    </div>
+
+} @else {
+
+    <ul class="task-list__grid">
+
+        @for (task of tasks(); track task.id) {
+
+            <li
+                class="task-list__card"
+            >
+
+                <div class="task-list__card-header">
+
+                    <span class="task-list__title">
+                        {{ task.title }}
+                    </span>
+
+                    <div class="task-list__status">
+
+                        <select
+                            class="task-list__status-select"
+                            [value]="task.status"
+                            (change)="onStatusChange(task, $event)"
+                            [disabled]="updatingTaskIds().includes(task.id)"
+                        >
+
+                            @if (task.status === 'new') {
+
+                                <option value="new">
+                                    New
+                                </option>
+
+                                <option value="in_progress">
+                                    In progress
+                                </option>
+
+                            }
+
+                            @if (task.status === 'in_progress') {
+
+                                <option value="in_progress">
+                                    In progress
+                                </option>
+
+                                <option value="done">
+                                    Done
+                                </option>
+
+                            }
+
+                            @if (task.status === 'done') {
+
+                                <option value="done">
+                                    Done
+                                </option>
+
+                            }
+
+                        </select>
+
+                        <div
+                            class="task-list__status-icon"
+                        >
+
+                            <svg
+                                class="task-list__status-svg"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <span class="task-list__date">
+                    {{ formatDate(task.createdAt) }}
+                </span>
+
+                <div class="task-list__description">
+                    {{ task.description }}
+                </div>
+
+            </li>
+
+        }
+
+    </ul>
+
+}
